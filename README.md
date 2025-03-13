@@ -19,18 +19,16 @@ Este es un chatbot desarrollado en Python que permite consultar el clima de cual
 
 ## 📌 Instalación y aplicación 
 
-### 1️⃣ Aplica el API de OpenWeather 
-
-# URL base de la API
+# 📌 URL base de la API
 url = "https://api.openweathermap.org/data/2.5/weather"
 
-# Reemplaza "TU_CLAVE_API" con tu clave real de OpenWeather
+# 📌 Reemplaza "TU_CLAVE_API" con tu clave real de OpenWeather
 api_key = "c35d148a8c6481ee8a81fdddced6e4e8"
 
-# Elige la ciudad que quieres consultar
+# 📌 Elige la ciudad que quieres consultar
 ciudad = "Madrid"
 
-# Parámetros para la consulta
+# 📌 Parámetros para la consulta
 params = {
     "q": ciudad,
     "appid": api_key,
@@ -38,11 +36,11 @@ params = {
     "lang": "es"  # Español
 }
 
-# Hacer la solicitud GET
+# 📌 Hacer la solicitud GET
 response = requests.get(url, params=params)
 data = response.json()
 
-# Verificar si la solicitud fue exitosa
+# 📌 Verificar si la solicitud fue exitosa
 if response.status_code == 200:
     print(f"🌤 Clima en {ciudad}: {data['weather'][0]['description'].capitalize()}")
     print(f"🌡 Temperatura: {data['main']['temp']}°C")
@@ -52,7 +50,7 @@ else:
 
     print(f"Código de respuesta: {response.status_code}")
 
-# Botón para hacer la solicitud
+# 📌 Botón para hacer la solicitud
 if st.button("Consultar clima"):
     response = requests.get(url, params=params)
     data = response.json()
