@@ -18,6 +18,9 @@ Este es un chatbot desarrollado en Python que permite consultar el clima de cual
 •⁠  ⁠*Requests* (para hacer peticiones HTTP)
 
 ## 📌 Instalación y aplicación 
+from flask import Flask, jsonify, request
+import requests
+import streamlit as st
 
 # 📌 URL base de la API
 url = "https://api.openweathermap.org/data/2.5/weather"
