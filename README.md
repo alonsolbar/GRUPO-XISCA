@@ -66,3 +66,4 @@ if st.button("Consultar clima"):
         st.error(f"❌ Error: {data.get('message', 'No se pudo obtener el clima')}")
         st.write(f"Código de respuesta: {response.status_code}")
 
+
