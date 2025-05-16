@@ -31,9 +31,6 @@ import streamlit as st
 # 📌 URL base de la API
 url = "https://api.openweathermap.org/data/2.5/weather"
 
-# 📌 Reemplaza "TU_CLAVE_API" con tu clave real de OpenWeather
-api_key = "c35d148a8c6481ee8a81fdddced6e4e8"
-
 # 📌 Elige la ciudad que quieres consultar
 ciudad = "Madrid"
 
